@@ -179,6 +179,7 @@ function createButtons() {
     event.preventDefault();
     showPaths();
   });
+
   $("#clear").click(function (event) {
     event.preventDefault();
     clear();
@@ -201,6 +202,21 @@ function createButtons() {
   });
 
   $("#fanout").val(fanout);
+  toggleButtons();
+}
+
+function toggleButtons() {
+  if (activeNodes.length == 0) {
+    $("#play").addClass("disabled");
+    $("#send_message").addClass("disabled");
+    $("#show_paths").addClass("disabled");
+    $("#random").addClass("disabled");
+  } else {
+    $("#play").removeClass("disabled");
+    $("#send_message").removeClass("disabled");
+    $("#show_paths").removeClass("disabled");
+    $("#random").removeClass("disabled");
+  }
 }
 
 function selectFanout(node) {
@@ -222,7 +238,7 @@ function selectFanout(node) {
 function cleanPaths(node) {
   /* Make all the paths invisible*/
   for (index in node.paths) {
-    selectedNode.paths[index].visible = false;
+    node.paths[index].visible = false;
   }
 }
 
@@ -291,6 +307,7 @@ function locateNodes() {
             this.fillColor= this.originalColor;
 	    cleanPaths(this);
 	  }
+	  toggleButtons();
           break;
       }
   }
