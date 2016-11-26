@@ -219,6 +219,13 @@ function selectFanout(node) {
   }
 }
 
+function cleanPaths(node) {
+  /* Make all the paths invisible*/
+  for (index in node.paths) {
+    selectedNode.paths[index].visible = false;
+  }
+}
+
 function showPaths() {
   /* Make all the paths visible or invisible*/
   for (var node in activeNodes) {
@@ -274,11 +281,16 @@ function locateNodes() {
           this.remove()
           break;
         case INFECTIVE:
-          this.strokeColor= 'red';
-          this.fillColor= 'red';
           if (activeNodes.indexOf(this) == -1) {
             activeNodes.push(this);
-          }
+	    this.strokeColor= 'red';
+            this.fillColor= 'red';
+          } else {
+	    remove_array_value(activeNodes, this);
+	    this.strokeColor= 'black';
+            this.fillColor= this.originalColor;
+	    cleanPaths(this);
+	  }
           break;
       }
   }
