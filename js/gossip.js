@@ -10,7 +10,6 @@ lastTick = 0;
 cycleTime = 1000;
 center = [310, 290];
 
-
 cycle = undefined; 
 radius = 240;
 cycle_counter =0;
@@ -139,6 +138,7 @@ function clear() {
     nodes[i].fillColor = nodes[i].originalColor;
   }
   activeNodes = [];
+  toggleButtons();
 }
 
 function createButtons() {
