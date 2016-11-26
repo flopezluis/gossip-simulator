@@ -1,5 +1,5 @@
 num_nodes = 40;
-fanout = 6;
+fanout = 4;
 INFECTIVE = 1;
 REMOVING = 3;
 SEND_TEST_MESSAGE = 5;
@@ -10,14 +10,6 @@ lastTick = 0;
 cycleTime = 1000;
 center = [310, 290];
 
-log_cycle = new PointText({
-  point: [center[0], center[1] + 50],
-  justification: 'center',
-  fontSize: 24,
-  strokeWidth: 3,
-  fillColor: 'black'
-});
-log_cycle.content = "log(" + num_nodes +") (base " + fanout +") = " + log(num_nodes, fanout) ;
 
 cycle = undefined; 
 radius = 240;
@@ -90,6 +82,14 @@ function init() {
     fillColor: 'black'
   });
   cycle.content = "Cycle"
+  log_cycle = new PointText({
+    point: [center[0], center[1] + 50],
+    justification: 'center',
+    fontSize: 24,
+    strokeWidth: 3,
+    fillColor: 'black'
+  });
+  log_cycle.content = "log(" + num_nodes +") (base " + fanout +") = " + log(num_nodes, fanout) ;
   lastTick = new Date().getTime();
 }
 

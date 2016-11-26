@@ -143,12 +143,12 @@ If you want to read a complete introduction I recommend you to look at my blog</
           </div>
             <div class="item">
               <h2 class="featurette-heading">Scaling</h2>
-             <p> <span class="text-muted">Ok, It will send the info to those nodes, right?</span> No, the number of nodes is set by the fanout property. Click in 'Random selection' to see the nodes it's going to share the info to, click several times you'll see that they're selected randomly.</p>
-             <p>Great! Now, let's send the info, click in "Send Message" </p>
-              <p class="">Once a message arrives to destination, that node is infected too, and as we've already mentioned once a node is infected it'll try to share the information again with other nodes.</p>
-              <p class="">Click again in "Send Message".</p>
-              <p class="">cool! right? Every infected node tries to share the information</p>
-              <p class="">It's time to see it in action. Press "Restart" to clean everything, then click in any node and press "Play".</p>
+             <p> <span class="text-muted">First, lets restart the simulator.</span></p>
+             <p>We've mentioned before that the equation helps you understand how Gossip scales. Let's see in action</p>
+              <p class="">Change the nodes to 80 and press "Apply". Ohh Did you see it? </p>
+              <p class="">We've doubled the number of nodes and according to the equation it will take only once more cycle. That's cool, right?</p>
+              <p class="">Let's see in action, select a node and click play</p>
+              <p class="">Let's try now with 120, wow so for 40 nodes it takes 2.66 cycles and for 120 3.45. That's pretty cool, it means it scales logarithmically.</p>
           </div>
 
           </div>
