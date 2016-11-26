@@ -120,6 +120,7 @@ If you want to read a complete introduction I recommend you to look at my blog</
             <li data-target="#wizard" data-slide-to="1"></li>
             <li data-target="#wizard" data-slide-to="2"></li>
             <li data-target="#wizard" data-slide-to="3"></li>
+            <li data-target="#wizard" data-slide-to="4"></li>
           </ol>
           <div class="carousel-inner wizard" role="listbox">
             <div class="item active">
@@ -162,6 +163,15 @@ If you want to read a complete introduction I recommend you to look at my blog</
              <p>Pretty cool, right? It converges even though some nodes weren't visible by others.</p>
           </div>
 
+            <div class="item">
+             <h2 class="featurette-heading">Robust</h2>
+             <p>No node plays a specific role in the network, so a failed node will not prevent other nodes from continuing sending messages [16].  Each node can join or leave whenever it pleases without seriously disrupting the system’s overall quality of service [5] They’re not robust in all circumstances, for example with Byzantine errors, if the problem is related to a malfunctioning nodes or malicious then gossip is not robust at all. </p>
+             <p> <span class="text-muted">Ok, let's see it.</span> Same as before, restart the simulator first.</p>
+             <p class="">We're going to delete some nodes, a node detects that other is down it will share that information in the next cycle.</p>
+             <p>Press "Delete" and start clicking in some nodes to delete them.</p>
+             <p>Once you're done, press "Delete" again to disable it and select one node to infect it, then press "Play"</p>
+             <p>Yeaah? It converges again even though some nodes were down.</p>
+          </div>
           </div>
         </div>
         <div class="col-md-7" style="height:660px;text-align:center;">
@@ -213,6 +223,7 @@ If you want to read a complete introduction I recommend you to look at my blog</
           <p class="lead">[2] A. Demers, D. Greene, C. Hauser, W. Irish, J. Larson, S. Shenker, H. Sturgis, D. Swinehart, and D. Terry. “Epidemic Algorithms for Replicated Database Maintenance.” In Proc. Sixth Symp. on Principles of Distributed Computing, pp. 1–12, Aug. 1987. ACM.</p>
           <p class="lead">[3] JELASITY, M., GUERRAOUI, R., KERMARREC, A.-M., AND VAN STEEN, M. 2004. The peer sampling service: Experimental evaluation of unstructured gossip-based implementations. In Middleware 2004, H.-A. Jacobsen, Ed. Lecture Notes in Computer Science, vol. 3231. Springer-Verlag, 79–98.</p>
           <p class="lead">[4] http://www.inf.u-szeged.hu/~jelasity/ddm/gossip.pdf</p>
+          <p class="lead">[5]  S. Voulgaris, M. Jelasity, M. van Steen, A Robust and Scalable Peer-to-Peer Gossiping Protocol,Lecture Notes in Computer Science (LNCS), vol. 2872 (Springer, Berlin/Heidelberg, 2004), pp. 47–58. doi:10.1007/b104265</p>
         </div>
       </div>
       <hr class="featurette-divider">
