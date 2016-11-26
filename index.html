@@ -119,6 +119,7 @@ If you want to read a complete introduction I recommend you to look at my blog</
             <li data-target="#wizard" data-slide-to="0" class="active"></li>
             <li data-target="#wizard" data-slide-to="1"></li>
             <li data-target="#wizard" data-slide-to="2"></li>
+            <li data-target="#wizard" data-slide-to="3"></li>
           </ol>
           <div class="carousel-inner wizard" role="listbox">
             <div class="item active">
@@ -143,12 +144,22 @@ If you want to read a complete introduction I recommend you to look at my blog</
           </div>
             <div class="item">
               <h2 class="featurette-heading">Scaling</h2>
-             <p> <span class="text-muted">First, lets restart the simulator.</span></p>
-             <p>We've mentioned before that the equation helps you understand how Gossip scales. Let's see in action</p>
+              <p> They are scalable because in general, it takes O(logN) rounds to reach all nodes. Also each node sends only a fixed number of messages independent of the number of nodes in the network. A node does not wait for acknowledgments, and it doesn’t take any recovery action if an acknowledgment does not arrive. [4]. A system can easily scale to millions of processes. Updates spread in expected time that grows logarithmic in the number of participating hosts, even in the face of host failures and message loss.</p> <p>Let's see in action, but first, <span class="text-muted">lets restart the simulator.</span></p>
               <p class="">Change the nodes to 80 and press "Apply". Ohh Did you see it? </p>
               <p class="">We've doubled the number of nodes and according to the equation it will take only once more cycle. That's cool, right?</p>
               <p class="">Let's see in action, select a node and click play</p>
               <p class="">Let's try now with 120, wow so for 40 nodes it takes 2.66 cycles and for 120 3.45. That's pretty cool, it means it scales logarithmically.</p>
+          </div>
+
+            <div class="item">
+             <h2 class="featurette-heading">Fault Tolerant</h2>
+             <p> They have the ability to operate in networks with irregular and unknown connectivity [1]. They work really well in these situations because a node shares the same information several times to different nodes, so if a node is not accesible the information is shared anyways through a different route. In other words there are many routes by which information can flow from its source to its destinations</p>
+             <p> <span class="text-muted">Ok, let's see it.</span> Same as before, restart the simulator first.</p>
+             <p class="">We're going to delete some links, which means that some nodes are not going to be able to communicate with some nodes.</p>
+             <p>Click in a node and in "Show Paths", then in "Delete" and start clicking in some paths.</p>
+             <p>We're going to repeat the same with more nodes, but important <span class="text-muted">Press "Delete" again to disable it </span> because otherwose you will remove nodes too and that's something that will see in the next step.</p>
+             <p>Ok, repeat it with more nodes and the select one node and press "Play" </p>
+             <p>Pretty cool, right? It converges even though some nodes weren't visible by others.</p>
           </div>
 
           </div>
@@ -201,6 +212,7 @@ If you want to read a complete introduction I recommend you to look at my blog</
           <p class="lead">[1] Ken Birman. The Promise, and Limitations, of Gossip Protocols. SIGOPS Oper. Syst. Rev., 41(5):8–13, October 2007 </p>
           <p class="lead">[2] A. Demers, D. Greene, C. Hauser, W. Irish, J. Larson, S. Shenker, H. Sturgis, D. Swinehart, and D. Terry. “Epidemic Algorithms for Replicated Database Maintenance.” In Proc. Sixth Symp. on Principles of Distributed Computing, pp. 1–12, Aug. 1987. ACM.</p>
           <p class="lead">[3] JELASITY, M., GUERRAOUI, R., KERMARREC, A.-M., AND VAN STEEN, M. 2004. The peer sampling service: Experimental evaluation of unstructured gossip-based implementations. In Middleware 2004, H.-A. Jacobsen, Ed. Lecture Notes in Computer Science, vol. 3231. Springer-Verlag, 79–98.</p>
+          <p class="lead">[4] http://www.inf.u-szeged.hu/~jelasity/ddm/gossip.pdf</p>
         </div>
       </div>
       <hr class="featurette-divider">
