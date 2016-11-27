@@ -206,8 +206,9 @@ If you want to read a complete introduction I recommend you to look at my blog</
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">Doubts?<span class="text-muted">This will help.</span></h2>
+          <h2 class="featurette-heading">Doubts? <span class="text-muted">This will help.</span></h2>
           <p class="lead">In the simulator all the nodes seem to be synchronized, like there is one global cycle. This happens in the simulator because is easier for hte visualization but this is <span class="">NOT</span> what happens in a real gossip protocol. Each node has its own cycle and there is not synchronization at all.</p>
+          <p class="lead"><span class="text-muted">How do the nodes know about each other?</span> That's a good question!</p><p class="lead"> There are several ways, depending on the implementation, for example in HyParView [6] when a node wishes to join the overlay, it must know another node that already belongs to the overlay. That node is callthe contact node. In Gossip protocols when two nodes exchange information, they also exchange the list of nodes thet have, in that way every cycle the view that each node has is updated.</p>
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive center-block" src="images/cycle.png" alt="Separated Cycles">
@@ -217,13 +218,32 @@ If you want to read a complete introduction I recommend you to look at my blog</
       <hr class="featurette-divider">
 
       <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Recommended readings and talks </h2>
+          <ul>
+            <li><a href="managementfromscratch.wordpress.com/2016/04/01/introduction-to-gossip/">Introduction to Gossip Protocols</a> When I started reading about Gossip I couldn't find a good introduction, there were thounsands of papers but I didn't a find a good and simple summary. So I created this one.</li>
+            <li><a href="http://dl.acm.org/citation.cfm?id=41841"> A. Demers, D. Greene, C. Hauser, W. Irish, J. Larson, S. Shenker, H. Sturgis, D. Swinehart, and D. Terry. “Epidemic Algorithms for Replicated Database Maintenance.” In Proc. Sixth Symp. on Principles of Distributed Computing, pp. 1–12, Aug. 1987. ACM.</a> This paper is consider to be seminal. So this is a mandatory reading.</li>
+            <li><a href="https://www.youtube.com/watch?v=FuP1Fvrv6ZQ">Cassandra Internals — Understanding Gossip</a>This is a good talk to understand how reconciliation works in Gossip.</li>
+            <li><a href="https://www.infoq.com/presentations/protocols-membership-dissemination-population">Membership, Dissemination and Population Protocols</a>This another good talk about practical applications of academic research with a large scale distributed system, as well as membership and dissemination protocols and their application in practice.</li>
+            <li><a href="http://lpdwww.epfl.ch/upload/documents/publications/neg--1184036295all.pdf"> The Peer Sampling Service: Experimental Evaluation of Unstructured
+Gossip-Based Implementations</a>For me the best paper to understand Gossip and how a node selects other nodes to exchange information with.</li>
+          </ul>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="images/cycle.png" alt="Separated Cycles">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
         <div class="col-md-12">
           <h2 class="featurette-heading">References</h2>
           <p class="lead">[1] Ken Birman. The Promise, and Limitations, of Gossip Protocols. SIGOPS Oper. Syst. Rev., 41(5):8–13, October 2007 </p>
           <p class="lead">[2] A. Demers, D. Greene, C. Hauser, W. Irish, J. Larson, S. Shenker, H. Sturgis, D. Swinehart, and D. Terry. “Epidemic Algorithms for Replicated Database Maintenance.” In Proc. Sixth Symp. on Principles of Distributed Computing, pp. 1–12, Aug. 1987. ACM.</p>
           <p class="lead">[3] JELASITY, M., GUERRAOUI, R., KERMARREC, A.-M., AND VAN STEEN, M. 2004. The peer sampling service: Experimental evaluation of unstructured gossip-based implementations. In Middleware 2004, H.-A. Jacobsen, Ed. Lecture Notes in Computer Science, vol. 3231. Springer-Verlag, 79–98.</p>
           <p class="lead">[4] http://www.inf.u-szeged.hu/~jelasity/ddm/gossip.pdf</p>
-          <p class="lead">[5]  S. Voulgaris, M. Jelasity, M. van Steen, A Robust and Scalable Peer-to-Peer Gossiping Protocol,Lecture Notes in Computer Science (LNCS), vol. 2872 (Springer, Berlin/Heidelberg, 2004), pp. 47–58. doi:10.1007/b104265</p>
+          <p class="lead">[5] S. Voulgaris, M. Jelasity, M. van Steen, A Robust and Scalable Peer-to-Peer Gossiping Protocol,Lecture Notes in Computer Science (LNCS), vol. 2872 (Springer, Berlin/Heidelberg, 2004), pp. 47–58. doi:10.1007/b104265</p>
+          <p class="lead">[6] J. Leita ̃o, J. Pereira, and L. Rodrigues. Hyparview: a membership protocol for reliable gossip-based broadcast. In Proceedings of the Internacional Conference on Dependable Systems and Networks (DSN), Edinburgh, UK, June 2007.</p>
         </div>
       </div>
       <hr class="featurette-divider">
