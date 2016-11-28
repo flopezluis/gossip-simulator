@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="A simulator to understand how Gossip Protocol works. In this site you'll also find information to learn about them.">
+    <meta name="author" content="Félix López Luis @flopezluis">
     <link rel="icon" href="../../favicon.ico">
 
     <title>Gossip Simulator</title>
@@ -54,8 +54,8 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>Gossip Protocols</h1>
-              <p>This simulator is a simplification of Gossip protocols to help you understand Gossip Protocols at glance. 
-If you want to read a complete introduction I recommend you to look at my blog</p>
+              <p>This simulator is a simplification of Gossip protocols to help you understand Gossip Protocols at a glance. 
+If you want to read a complete introductioni, I recommend that you look at my blog</p>
               <p><a class="btn btn-lg btn-primary" href="https://managementfromscratch.wordpress.com/2016/04/01/introduction-to-gossip/" role="button">Learn more</a></p>
             </div>
           </div>
@@ -64,8 +64,8 @@ If you want to read a complete introduction I recommend you to look at my blog</
           <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>What’s a Gossip Protocol?</h1>
-              <p>Gossip protocols are a communication protocol, a way of broadcast messages inspired by:<br>
+              <h1>What are Gossip Protocols?</h1>
+              <p>Gossip protocols are communication protocols, a way of broadcasting messages inspired by:<br>
               Epidemics, Human gossip, Social networks</p>
               <p><a class="btn btn-lg btn-primary" href="https://managementfromscratch.wordpress.com/2016/04/01/introduction-to-gossip/" role="button">Learn more</a></p>
             </div>
@@ -76,9 +76,7 @@ If you want to read a complete introduction I recommend you to look at my blog</
           <div class="container">
             <div class="carousel-caption">
               <h1>How do they work?</h1>
-              <p> The basic idea behind them is this: A node wants to share some information to the other nodes in the network. Then periodically it selects rand
-      omly a node from the set of nodes and exchanges the information. The node that receives the information does exactly the same thing.  Normally the information is sent pe
-      riodically to N targets, not just one, N is called fanout.</p>
+              <p> The basic idea behind them is this: a node wants to share some information with the other nodes in the network. Then, it periodically selects a random node from the set of nodes and exchanges the information. The node receiving the information does exactly the same thing.  Normally, the information is sent periodically to N targets, not just one. N is called fanout.</p>
             </div>
           </div>
         </div>
@@ -86,8 +84,8 @@ If you want to read a complete introduction I recommend you to look at my blog</
           <img class="fourth-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>What is it used for?</h1>
-              <p>A primary use of gossip is for information diffusion: some event occurs, and our goal is to spread the word [1]. But they're used for Database replication, Information dissemination, Cluster membership, Failure Detectors, Overlay Networks, Aggregations </p>
+              <h1>What are they used for?</h1>
+              <p>A primary use of gossip is for information diffusion: some event occurs and our goal is to spread the word [1]. They're also used for Database replication, Information dissemination, Cluster membership, Failure Detectors, Overlay Networks and Aggregations </p>
             </div>
           </div>
         </div>
@@ -125,23 +123,23 @@ If you want to read a complete introduction I recommend you to look at my blog</
           <div class="carousel-inner wizard" role="listbox">
             <div class="item active">
               <h2 class="featurette-heading">Let's play with the simulator. </h2>
-              <p>As already mentioned above Gossip protocols are executed periodically, that is, in cycles. That's what the word cycle means, it will rotate in every cycle, don't worry you'll see it really soon.</p>
+              <p>As already mentioned above, Gossip Protocols are executed periodically, that is, in cycles. That's what the word cycle in the simulator means. It will rotate in every cycle. Don't worry if don't understand it. You'll see how it works really soon.</p>
               <p class="text-muted">Ok, and what about the equation?</p>
-              <p>The equation is an aproximation, it will show you how many cycles the gossip protocol needs to spread the information to every node, if you want to see a converge simulator that takes into account packet loss, node failures, etc <a class="" href="https://www.serf.io/docs/internals/simulator.html">see</a></p>
-              <p class="">Select a node. Go, click in any of them, the node should be red now, that's because it's infected as it's called in [2].</p>
-              <p class="">This node wants to share the information, but to what nodes? click in 'show paths', those are the nodes is linked to. So each node has a partial view of the other nodes? It could have a complete list but that would make the protocol difficult to scale (think in thunsands/millions of nodes), please read [3] if you want to learn more. </p>
-            <p class="text-muted">Go to the next part</p>
+              <p>The equation is an aproximation. It will show you how many cycles the gossip protocol needs to spread the information to every node. If you want to see a converge simulator that takes into account packet loss, node failures, etc. <a class="" href="https://www.serf.io/docs/internals/simulator.html">Take a look here</a>.</p>
+              <p class="">Ok, let's start playing the simulator. Select a node. Go ahead, click on any of them. The node should be red now because it's infected, as defined in one of the most influential papers [2].</p>
+              <p class="">This node wants to share the information. But what nodes should it share with? click on 'show paths'. Those are the nodes it is linked to. So, does each node have a partial view of the other nodes? It could have a complete list but that would make the protocol difficult to scale (think of thounsands/millions of nodes). Please read [3] if you want to learn more. </p>
+            <p class="text-muted">Go on to the next part</p>
             </div>
 
             <div class="item">
               <h2 class="featurette-heading">Sending messages</h2>
-             <p> <span class="text-muted">Ok, It will send the info to those nodes, right?</span> No, the number of nodes is set by the fanout property. Click in 'Random selection' to see the nodes it's going to share the info to, click several times you'll see that they're selected randomly.</p>
-             <p>Great! Now, let's send the info, click in "Send Message" </p>
-              <p class="">Once a message arrives to destination, that node is infected too, and as we've already mentioned once a node is infected it'll try to share the information again with other nodes.</p>
-              <p class="">Click again in "Send Message".</p>
-              <p class="">cool! right? Every infected node tries to share the information</p>
-              <p class="">It's time to see it in action. Press "Restart" to clean everything, then click in any node and press "Play".</p>
-              <p class="text-muted">How many cycles?</p> It's likely that the number of cycles the equation predicts is not the same, don't worry it's normal, take into account that the nodes are selected randomly, so it can happens that a node is selected twice.
+             <p> <span class="text-muted">Ok. It will send the info to those nodes, right?</span> No! The number of nodes is set by the fanout property. Click on 'Random selection' to see the nodes it's going to share the info with. If you click several times, you'll see that they're selected randomly.</p>
+             <p>Great! Now, let's send the info. Click in "Send Message". </p>
+              <p class="">Once a message arrives to the destination, that node is infected too. As we've already mentioned, once a node is infected, it will try to share the information again with other nodes.</p>
+              <p class="">Click on "Send Message" again.</p>
+              <p class="">Cool!, right? Every infected node tries to share the information.</p>
+              <p class="">It's time to see it in action. Press "Restart" to clear everything then click on any node and press "Play".</p>
+              <p class="text-muted">How many cycles did it take?</p> It's likely that the number of cycles the equation predicts is not the same. Don't worry! That's normal. Keep in mind that the nodes are selected randomly so a node could posibly be selected twice.
           </div>
             <div class="item">
               <h2 class="featurette-heading">Scaling</h2>
@@ -157,7 +155,7 @@ If you want to read a complete introduction I recommend you to look at my blog</
              <p> They have the ability to operate in networks with irregular and unknown connectivity [1]. They work really well in these situations because a node shares the same information several times to different nodes, so if a node is not accesible the information is shared anyways through a different route. In other words there are many routes by which information can flow from its source to its destinations</p>
              <p> <span class="text-muted">Ok, let's see it.</span> Same as before, restart the simulator first.</p>
              <p class="">We're going to delete some links, which means that some nodes are not going to be able to communicate with some nodes.</p>
-             <p>Click in a node and in "Show Paths", then in "Delete" and start clicking in some paths.</p>
+             <p>Click in a node and in "Show Paths", then in "Delete" and start clicking on some paths.</p>
              <p>We're going to repeat the same with more nodes, but very important <span class="text-muted">Press "Delete" again to disable it </span> because otherwise you will remove nodes too and that's something that will see in the next step.</p>
              <p>Ok, repeat it with more nodes and the select one node and press "Play" </p>
              <p>Pretty cool, right? It converges even though some nodes weren't visible by others.</p>
@@ -168,7 +166,7 @@ If you want to read a complete introduction I recommend you to look at my blog</
              <p>No node plays a specific role in the network, so a failed node will not prevent other nodes from continuing sending messages [16].  Each node can join or leave whenever it pleases without seriously disrupting the system’s overall quality of service [5] They’re not robust in all circumstances, for example with Byzantine errors, if the problem is related to a malfunctioning nodes or malicious then gossip is not robust at all. </p>
              <p> <span class="text-muted">Ok, let's see it.</span> Same as before, restart the simulator first.</p>
              <p class="">We're going to delete some nodes, a node detects that other is down it will share that information in the next cycle.</p>
-             <p>Press "Delete" and start clicking in some nodes to delete them.</p>
+             <p>Press "Delete" and start clicking on some nodes to delete them.</p>
              <p>Once you're done, press "Delete" again to disable it and select one node to infect it, then press "Play"</p>
              <p>Yeaah? It converges again even though some nodes were down.</p>
           </div>
