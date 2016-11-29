@@ -55,7 +55,7 @@
             <div class="carousel-caption">
               <h1>Gossip Protocols</h1>
               <p>This simulator is a simplification of Gossip protocols to help you understand Gossip Protocols at a glance. 
-If you want to read a complete introductioni, I recommend that you look at my blog</p>
+If you want to read a complete introduction, I recommend that you look at my blog</p>
               <p><a class="btn btn-lg btn-primary" href="https://managementfromscratch.wordpress.com/2016/04/01/introduction-to-gossip/" role="button">Learn more</a></p>
             </div>
           </div>
@@ -138,36 +138,36 @@ If you want to read a complete introductioni, I recommend that you look at my bl
               <p class="">Click on "Send Message" again.</p>
               <p class="">Cool!, right? Every infected node tries to share the information.</p>
               <p class="">It's time to see it in action. Press "Restart" to clear everything then click on any node and press "Play".</p>
-              <p class="text-muted">How many cycles did it take?</p> It's likely that the number of cycles the equation predicts is not the same. Don't worry! That's normal. Keep in mind that the nodes are selected randomly so a node could posibly be selected twice.
+              <p class="text-muted">How many cycles did it take?</p> It's likely that the number of cycles the equation predicts won't be the same. Don't worry! That's normal. Keep in mind that the nodes are selected randomly so a node could posibly be selected twice.
           </div>
             <div class="item">
               <h2 class="featurette-heading">Scaling</h2>
-              <p> They are scalable because in general, it takes O(logN) rounds to reach all nodes. Also each node sends only a fixed number of messages independent of the number of nodes in the network. A node does not wait for acknowledgments, and it doesn’t take any recovery action if an acknowledgment does not arrive. [4]. A system can easily scale to millions of processes. Updates spread in expected time that grows logarithmic in the number of participating hosts, even in the face of host failures and message loss.</p> <p>Let's see in action, but first, <span class="text-muted">lets restart the simulator.</span></p>
-              <p class="">Change the nodes to 80 and press "Apply". Ohh Did you see it? </p>
-              <p class="">We've doubled the number of nodes and according to the equation it will take only once more cycle. That's cool, right?</p>
-              <p class="">Let's see in action, select a node and click play</p>
-              <p class="">Let's try now with 120, wow so for 40 nodes it takes 2.66 cycles and for 120 3.45. That's pretty cool, it means it scales logarithmically.</p>
+              <p> Gossip Protocols are scalable because in general, it takes O(logN) rounds in order to reach all nodes. Also each node sends only a fixed number of messages regardless of the number of nodes in the network. A node does not wait for acknowledgments, and it doesn’t take any recovery action if an acknowledgment does not arrive. [4]. A system can easily scale to millions of processes. Updates spread in expected time that grows logarithmic with the number of participating nodes, even in the face of node failures and message loss.</p> <p>We're going to see this in action but <span class="text-muted">let's restart the simulator.</span></p>
+              <p class="">Change the nodes to 80 and press "Apply". Ohh.. Did you see it? </p>
+              <p class="">We've doubled the number of nodes and, according to the equation, it will take only once more cycle. That's cool, right?</p>
+              <p class="">Let's see this in action. Select a node and click play</p>
+              <p class="">Now, let's try it with 120. Wow! So for 40 nodes it takes 2.66 cycles and 3.45 for 120. That's pretty cool. It means it scales logarithmically.</p>
           </div>
 
             <div class="item">
              <h2 class="featurette-heading">Fault Tolerant</h2>
-             <p> They have the ability to operate in networks with irregular and unknown connectivity [1]. They work really well in these situations because a node shares the same information several times to different nodes, so if a node is not accesible the information is shared anyways through a different route. In other words there are many routes by which information can flow from its source to its destinations</p>
-             <p> <span class="text-muted">Ok, let's see it.</span> Same as before, restart the simulator first.</p>
-             <p class="">We're going to delete some links, which means that some nodes are not going to be able to communicate with some nodes.</p>
-             <p>Click in a node and in "Show Paths", then in "Delete" and start clicking on some paths.</p>
-             <p>We're going to repeat the same with more nodes, but very important <span class="text-muted">Press "Delete" again to disable it </span> because otherwise you will remove nodes too and that's something that will see in the next step.</p>
-             <p>Ok, repeat it with more nodes and the select one node and press "Play" </p>
-             <p>Pretty cool, right? It converges even though some nodes weren't visible by others.</p>
+             <p> Gossip Protocols have the ability to operate in networks with irregular and unknown connectivity [1]. They work really well in these situations because a node shares the same information several times to different nodes. So, if a node is not accesible, the information is shared anyways via a different route. In other words, there are many routes by which information can flow from its source to its destinations</p>
+             <p> <span class="text-muted">Ok, let's see it.</span> As before, restart the simulator first.</p>
+             <p class="">We're going to delete some links. This means that some nodes are not going to be able to communicate with some nodes.</p>
+             <p>Click on a node and on "Show Paths". Then click "Delete" and start clicking on some paths.</p>
+             <p>We're going to repeat the same but with more nodes. Now this is very important <span class="text-muted">Press "Delete" again to disable it </span> because otherwise you will remove nodes too. That's something we'll take a look at in the next step.</p>
+             <p>Ok. Repeat it with more nodes and the select one node and press "Play" </p>
+             <p>Pretty cool, right? It converges even though some nodes weren't visible to some others.</p>
           </div>
 
             <div class="item">
              <h2 class="featurette-heading">Robust</h2>
-             <p>No node plays a specific role in the network, so a failed node will not prevent other nodes from continuing sending messages [16].  Each node can join or leave whenever it pleases without seriously disrupting the system’s overall quality of service [5] They’re not robust in all circumstances, for example with Byzantine errors, if the problem is related to a malfunctioning nodes or malicious then gossip is not robust at all. </p>
-             <p> <span class="text-muted">Ok, let's see it.</span> Same as before, restart the simulator first.</p>
-             <p class="">We're going to delete some nodes, a node detects that other is down it will share that information in the next cycle.</p>
+             <p>No node plays a specific role in the network so a failed node will not prevent other nodes from continuing to send messages [16].  Each node can join or leave whenever it pleases without seriously disrupting the system’s overall quality of service [5]. However, these protocols are not robust in all circumstances such as, for example, with Byzantine errors. If the problem is related to a malfunctioning or malicious node then gossip is not robust at all. </p>
+             <p> <span class="text-muted">Ok, let's see how this works.</span> As before, restart the simulator first.</p>
+             <p class="">Now we're going to delete some nodes. When a node detects that other is down, it will share that information in the next cycle.</p>
              <p>Press "Delete" and start clicking on some nodes to delete them.</p>
-             <p>Once you're done, press "Delete" again to disable it and select one node to infect it, then press "Play"</p>
-             <p>Yeaah? It converges again even though some nodes were down.</p>
+             <p>Once you're done, press "Delete" again to disable it. Then select one node to infect it and press "Play"</p>
+             <p>Yeaah! It converges again even though some nodes were down.</p>
           </div>
           </div>
         </div>
@@ -192,7 +192,7 @@ If you want to read a complete introductioni, I recommend that you look at my bl
       <div class="row featurette">
         <div class="col-md-7 col-md-push-5">
           <h2 class="featurette-heading">Is it a real implementation?</h2>
-          <p class="lead">If you take a look at the code, you won't see a real implementation of a Gossip protocol. This is because there is no reason for it. The goal of this simulator is to help understand how they work not how they're implemented. If we'd want to do it we would need to implement a transport layer to mimic tcp or udp, the best idea would be to use the messages as transport layer. In my github you can see a real implementation in clojure <a class="btn-lg " href="https://github.com/flopezluis/gossip" >here</a>&<a class="btn-lg" href="https://github.com/flopezluis/hyparview">here</a> </p>
+          <p class="lead">If you take a look at the code, you won't see a real implementation of a Gossip protocol. This is because there is no reason for it. The goal of this simulator is to help people understand how they work not how they're implemented. If we really wanted to do it, we would need to implement a transport layer to mimic tcp or udp. The best idea would be to use the messages as transport layer. In my github, you can see a real implementation in clojure <a class="btn-lg " href="https://github.com/flopezluis/gossip" >here</a>&<a class="btn-lg" href="https://github.com/flopezluis/hyparview">here</a> </p>
         </div>
         <div class="col-md-5 col-md-pull-7">
           <img class="featurette-image img-responsive center-block" src="images/not_implemented.png" width="500px" height="500px" alt="Implementation">
@@ -204,8 +204,8 @@ If you want to read a complete introductioni, I recommend that you look at my bl
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">Doubts? <span class="text-muted">This will help.</span></h2>
-          <p class="lead">In the simulator all the nodes seem to be synchronized, like there is one global cycle. This happens in the simulator because is easier for hte visualization but this is <span class="">NOT</span> what happens in a real gossip protocol. Each node has its own cycle and there is not synchronization at all.</p>
-          <p class="lead"><span class="text-muted">How do the nodes know about each other?</span> That's a good question!</p><p class="lead"> There are several ways, depending on the implementation, for example in HyParView [6] when a node wishes to join the overlay, it must know another node that already belongs to the overlay. That node is callthe contact node. In Gossip protocols when two nodes exchange information, they also exchange the list of nodes thet have, in that way every cycle the view that each node has is updated.</p>
+          <p class="lead">In the simulator, all the nodes seem to be synchronized as if there was one global cycle. This happens in the simulator because is easier for the visualization. However, this is <span class="">NOT</span> what happens in a real gossip protocol where each node has its own cycle and there is not synchronization at all.</p>
+          <p class="lead"><span class="text-muted">How do the nodes know about each other?</span> That's a good question!</p><p class="lead"> There are several ways depending on the implementation. For example, in HyParView [6], when a node wishes to join the overlay, it must know another node that already belongs to the overlay. That node is called the contact node. In Gossip protocolsi, when two nodes exchange information, they also exchange the list of nodes thet have. In that way, the view that each node has is updated in every cycle.</p>
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive center-block" src="images/cycle.png" alt="Separated Cycles">
